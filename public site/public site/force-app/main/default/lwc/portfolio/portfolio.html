@@ -1,0 +1,300 @@
+<!--
+  @description       : 
+  @author            : Anushka Dixit
+  @group             : 
+  @last modified on  : 24-02-2023
+  @last modified by  : Anushka Dixit
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   20-02-2023   Anushka Dixit   Initial Version
+-->
+<template>
+  <div class={themeClass}>
+    <nav class=" " role="navigation">
+      <ul class="slds-grid">
+        <li class="slds-context-bar__item">
+          <div class="slds-context-bar__label-action" title=Home>
+            <span class="slds-assistive-text">Home:</span>
+            <span class="slds-truncate" title="Home" onclick={handleHomeClick}
+              >Home</span
+            >
+          </div>
+        </li>
+        <li class="slds-context-bar__item">
+          <div class="slds-context-bar__label-action" title="Skills">
+            <span class="slds-assistive-text">Skills:</span>
+            <span
+              class="slds-truncate"
+              title="Skills"
+              onclick={handleSkillsClick}
+              >Skills</span
+            >
+          </div>
+        </li>
+        <li class="slds-context-bar__item">
+          <a
+            href="https://www.linkedin.com/in/anushkadixit630"
+            target="_blank"
+            class="slds-context-bar__label-action"
+            title="Linkdin"
+          >
+            <span class="slds-assistive-text">Current Page:</span>
+            <span class="slds-truncate" title="My Profile on Linkedin"
+              >Linkedin</span
+            >
+          </a>
+        </li>
+        <li class="slds-context-bar__item">
+          <div class="slds-context-bar__label-action" title="Contact Me">
+            <span class="slds-assistive-text">Current Page:</span>
+            <span
+              class="slds-truncate"
+              title="Contact Me"
+              onclick={handleEducationClick}
+              >My Education</span
+            >
+          </div>
+        </li>
+        <li>
+          <template if:true={defaultThemeLight}>
+            <i
+              class="slds-is-absolute fa fa-sun-o fa-3x"
+              onclick={changeTheme}
+            ></i>
+          </template>
+          <template if:false={defaultThemeLight}>
+            <i class="fa fa-moon-o fa-3x" onclick={changeTheme}></i>
+          </template>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!------------------------------- HOME ---------------------------------------------->
+  <template if:true={showHomePage}>
+    <c-my-portfolio-home 
+    theme-class={themeClass}>
+  </c-my-portfolio-home>
+  </template>
+  <!--------------------------------- SKILLS  ---------------------------------------------->
+  <template if:true={showSkillsPage}>
+    <c-my-portfolio-skills-page
+      theme-class={themeClass}
+    ></c-my-portfolio-skills-page>
+  </template>
+   <!--------------------------------- Education  ---------------------------------------------->
+   <template if:true={handleEducationClick1}>
+    <c-My-Education-Page
+      theme-class={themeClass}
+    ></c-My-Education-Page>
+  </template>
+ <!--------------------------------- FOOTER  ---------------------------------------------->
+  
+ <section class="footer">
+
+  <div class="box-container">
+
+      <div class="box box1">
+        
+          <h3>Anushka's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀.</p>
+      </div>
+
+      <div class="box" >
+          <h3>quick links</h3>
+          <!-- <a href="/#"><i class="fas fa-chevron-circle-right"  onclick={handleHomeClick}></i> home</a>
+          <a href="/#about"><i class="fas fa-chevron-circle-right"></i> about</a> -->
+          <!-- <a href="/#"><i class="fas fa-chevron-circle-right"  onclick={handleSkillsClick}></i> skills</a> -->
+
+          <ul class="inner-box" style="margin:10px; justify-content: center;">
+            <li
+            onclick={handleHomeClick}
+          >
+            <a href="#">Home</a>
+          </li>
+        
+          <li
+            onclick={handleSkillsClick}
+          >
+            <a href="#">Skills</a>
+          </li>
+          <li
+            onclick={handleEducationClick}
+          >
+            <a href="#">education</a>
+          </li>
+            
+          <li>
+          <a
+          href="https://www.linkedin.com/in/anushkadixit630">
+          LINKEDIN</a>
+         </li>
+          
+          </ul>
+         </div>
+
+      <div class="box">
+
+          <h3>contact info</h3>
+          <ul>
+            <li>
+          <p> 
+            <lightning-icon icon-name='action:call' alternative-text='call' size='small' title='call'></lightning-icon>&nbsp;
+                    +91 6307302338</p>
+          </li>
+          <li>
+          <p> <lightning-icon icon-name='standard:email_chatter' alternative-text='email_chatter' size='small' title='email_chatter'></lightning-icon>&nbsp;
+            anushkadixit630@gmail.com</p>
+          </li>
+          <li>
+          <p> <lightning-icon icon-name='standard:high_velocity_sales' alternative-text='high_velocity_sales' size='small' title='high_velocity_sales'></lightning-icon>&nbsp;
+            Bengaluru, India-560102</p>
+          </li>
+          </ul>
+          <div class="share">
+   
+            <!-- Social Links -->
+              <!-- <a href="https://www.linkedin.com/in/jigar-sable" class="fab fa-linkedin" target="_blank"></a>
+              <a href="https://github.com/jigar-sable" class="fab fa-github" target="_blank"></a>
+              <a href="mailto:jigarsable21@gmail.com" class="fas fa-envelope" target="_blank"></a>
+              <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" target="_blank"></a>
+              <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" target="_blank"></a>
+ -->
+            
+              <div class="icons">
+                <table>
+                  <td>
+                      <a
+                        href="https://www.linkedin.com/in/anushkadixit630"
+                        class="fab fa-linkedin"
+                      >
+                        <svg viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier"> <path d="M599.256 326.893C638.207 324.995 644.199 388.816 601.453 383.223C565.997 382.224 561.503 327.892 599.256 326.893Z" fill="white"></path> 
+                              <path d="M726.895 478.902C729.991 250.487 638.505 220.924 429.866 233.608C286.146 222.522 229.716 331.386 229.317 460.125C221.527 586.168 260.378 745.468 417.282 732.085C613.137 728.59 735.984 708.714 726.895 478.902ZM384.423 85.7931C608.743 64.9192 868.418 97.079 871.514 377.828C879.404 507.066 883.599 645.593 820.278 762.847C752.862 877.503 640.503 872.709 523.649 875.406C420.877 879.501 314.91 888.39 215.834 854.732C114.86 819.776 87.3942 743.571 89.5915 643.895C86.0959 558.103 82.6002 472.51 84.0984 386.617C89.0921 183.071 177.981 81.099 384.423 85.7931Z" fill="#000000"></path>
+                               <path d="M429.866 233.608C638.505 220.924 729.89 250.487 726.894 478.902C735.983 708.714 613.136 728.49 417.381 732.085C260.377 745.469 221.626 586.068 229.416 460.125C229.716 331.386 286.145 222.522 429.866 233.608ZM682.949 486.093C682.949 344.67 665.571 269.763 504.972 276.954C457.231 281.648 401.401 274.557 353.461 290.837C257.181 337.878 270.465 467.216 279.354 556.904C288.043 701.823 408.193 697.528 520.652 681.349C658.779 674.058 684.248 614.432 682.949 486.093Z" fill="white"></path> 
+                               <path d="M495.188 393.309C393.515 388.116 362.155 555.606 473.715 560.101C578.584 557.604 594.664 423.172 495.188 393.309ZM473.915 354.857C649.495 342.972 638.709 602.448 473.116 600.65C316.212 595.856 330.894 368.84 473.915 354.857Z" fill="white"></path>
+                                <path d="M473.813 560.102C362.252 555.508 393.513 388.017 495.286 393.31C594.662 423.173 578.582 557.605 473.813 560.102Z" fill="#000000"></path> <path d="M504.973 276.955C665.572 269.664 683.05 344.67 682.95 486.093C684.149 614.433 658.781 674.058 520.653 681.349C408.194 697.529 288.044 701.823 279.355 556.905C270.466 467.117 257.282 337.878 353.462 290.837C401.402 274.558 457.233 281.649 504.973 276.955ZM473.213 600.65C638.706 602.448 649.592 342.972 474.012 354.857C330.89 368.84 316.209 595.856 473.213 600.65ZM601.452 383.222C644.199 388.815 638.206 325.094 599.255 326.892C561.502 327.891 565.997 382.223 601.452 383.222Z" fill="#000000"></path>
+                           </g>
+                      </svg>
+                      </a>
+                  </td>
+                  <td>
+                      <a href="https://trailblazer.me/id/adixit0501" class="fab fa-github" >
+                        <svg fill="#000000" viewBox="0 0 52 52" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                          <g id="SVGRepo_bgCarrier1" stroke-width="0"></g><g id="SVGRepo_tracerCarrier1" stroke-linecap="round" stroke-linejoin="round"></g>
+                          <g id="SVGRepo_iconCarrier1"><path d="M22.21,36.21a2.72,2.72,0,0,1-.11.25,6.89,6.89,0,0,0,2.42,7.85c1.58,1.24,1.89,1.76,1.73,2.92A7.59,7.59,0,0,1,25.15,50,44.87,44.87,0,0,1,2,42.64H2v-3.7c0-.93,0-1.83.1-2.73H22.21Zm27.69,0c.05.9.1,1.8.1,2.73h0v3.69a45,45,0,0,1-20.31,7.2,10,10,0,0,0,.54-2c.53-3.73-1.83-5.57-3.24-6.67a2.83,2.83,0,0,1-1.12-3.25,8.24,8.24,0,0,1,.89-1.67H49.9ZM22.5,19.59l4.4,6.47-4.16,6.13h-8.8ZM26,2A39.25,39.25,0,0,1,49.48,32.19H43.6l-8.77-12.9a2.08,2.08,0,0,0-3.33,0h0l-2.17,3.19-5.17-7.6a2.09,2.09,0,0,0-3.33,0h0L9.08,32.19H2.52A39.25,39.25,0,0,1,26,2Zm7.17,22,5.56,8.19H27.61Z" fill-rule="evenodd">
+              
+                          </path>
+                      </g>
+                  </svg>
+                       
+                       
+                      </a>
+                  </td>
+                 
+                </table>
+                
+               
+              
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable"> Anushka Dixit</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <div class="footer-basic">
+    <footer>
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/anushkadixit630"
+          class="socialLink"
+        >
+          <svg viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier"> <path d="M599.256 326.893C638.207 324.995 644.199 388.816 601.453 383.223C565.997 382.224 561.503 327.892 599.256 326.893Z" fill="white"></path> 
+                <path d="M726.895 478.902C729.991 250.487 638.505 220.924 429.866 233.608C286.146 222.522 229.716 331.386 229.317 460.125C221.527 586.168 260.378 745.468 417.282 732.085C613.137 728.59 735.984 708.714 726.895 478.902ZM384.423 85.7931C608.743 64.9192 868.418 97.079 871.514 377.828C879.404 507.066 883.599 645.593 820.278 762.847C752.862 877.503 640.503 872.709 523.649 875.406C420.877 879.501 314.91 888.39 215.834 854.732C114.86 819.776 87.3942 743.571 89.5915 643.895C86.0959 558.103 82.6002 472.51 84.0984 386.617C89.0921 183.071 177.981 81.099 384.423 85.7931Z" fill="#000000"></path>
+                 <path d="M429.866 233.608C638.505 220.924 729.89 250.487 726.894 478.902C735.983 708.714 613.136 728.49 417.381 732.085C260.377 745.469 221.626 586.068 229.416 460.125C229.716 331.386 286.145 222.522 429.866 233.608ZM682.949 486.093C682.949 344.67 665.571 269.763 504.972 276.954C457.231 281.648 401.401 274.557 353.461 290.837C257.181 337.878 270.465 467.216 279.354 556.904C288.043 701.823 408.193 697.528 520.652 681.349C658.779 674.058 684.248 614.432 682.949 486.093Z" fill="white"></path> 
+                 <path d="M495.188 393.309C393.515 388.116 362.155 555.606 473.715 560.101C578.584 557.604 594.664 423.172 495.188 393.309ZM473.915 354.857C649.495 342.972 638.709 602.448 473.116 600.65C316.212 595.856 330.894 368.84 473.915 354.857Z" fill="white"></path>
+                  <path d="M473.813 560.102C362.252 555.508 393.513 388.017 495.286 393.31C594.662 423.173 578.582 557.605 473.813 560.102Z" fill="#000000"></path> <path d="M504.973 276.955C665.572 269.664 683.05 344.67 682.95 486.093C684.149 614.433 658.781 674.058 520.653 681.349C408.194 697.529 288.044 701.823 279.355 556.905C270.466 467.117 257.282 337.878 353.462 290.837C401.402 274.558 457.233 281.649 504.973 276.955ZM473.213 600.65C638.706 602.448 649.592 342.972 474.012 354.857C330.89 368.84 316.209 595.856 473.213 600.65ZM601.452 383.222C644.199 388.815 638.206 325.094 599.255 326.892C561.502 327.891 565.997 382.223 601.452 383.222Z" fill="#000000"></path>
+             </g>
+        </svg>
+        </a>
+        <a href="https://trailblazer.me/id/adixit0501" class="socialLink">
+          <svg fill="#000000" viewBox="0 0 52 52" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier1" stroke-width="0"></g><g id="SVGRepo_tracerCarrier1" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier1"><path d="M22.21,36.21a2.72,2.72,0,0,1-.11.25,6.89,6.89,0,0,0,2.42,7.85c1.58,1.24,1.89,1.76,1.73,2.92A7.59,7.59,0,0,1,25.15,50,44.87,44.87,0,0,1,2,42.64H2v-3.7c0-.93,0-1.83.1-2.73H22.21Zm27.69,0c.05.9.1,1.8.1,2.73h0v3.69a45,45,0,0,1-20.31,7.2,10,10,0,0,0,.54-2c.53-3.73-1.83-5.57-3.24-6.67a2.83,2.83,0,0,1-1.12-3.25,8.24,8.24,0,0,1,.89-1.67H49.9ZM22.5,19.59l4.4,6.47-4.16,6.13h-8.8ZM26,2A39.25,39.25,0,0,1,49.48,32.19H43.6l-8.77-12.9a2.08,2.08,0,0,0-3.33,0h0l-2.17,3.19-5.17-7.6a2.09,2.09,0,0,0-3.33,0h0L9.08,32.19H2.52A39.25,39.25,0,0,1,26,2Zm7.17,22,5.56,8.19H27.61Z" fill-rule="evenodd">
+
+            </path>
+        </g>
+    </svg>
+         
+         
+        </a>
+        <a href="https://www.linkedin.com/in/anushkadixit630" class="socialLink">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+            />
+          </svg>
+        </a>
+      </div>
+      <ul class="list-inline">
+        <li
+          class="list-inline-item"
+          onclick={handleHomeClick}
+          style="font-style: normal; font-size: 15px; color: rgb(16, 16, 14)"
+        >
+          <a href="#"><b>HOME</b></a>
+        </li>
+        <li
+          class="list-inline-item"
+          onclick={handleSkillsClick}
+          style="font-style: normal; font-size: 15px; color: rgb(7, 7, 6)"
+        >
+          <a href="#"><b>SKILLS</b></a>
+        </li>
+        <li class="list-inline-item">
+          <a
+            href="https://www.linkedin.com/in/anushkadixit630"
+            style="
+              font-style: normal;
+              font-size: 15px;
+              color: rgb(13, 13, 9);
+            "
+            ><b>LINKEDIN</b></a
+          >
+        </li>
+      </ul>
+    </footer>
+  </div> -->
+</template>

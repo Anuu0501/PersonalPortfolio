@@ -1,0 +1,162 @@
+<!--
+  @description       : 
+  @author            : Anushka Dixit
+  @group             : 
+  @last modified on  : 21-02-2023
+  @last modified by  : Anushka Dixit
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   20-02-2023   Anushka Dixit   Initial Version
+-->
+<template>
+    <div class="loc">
+      <div class="container mt-3 contactContent">
+        <h1 class="text-center">Contact Me</h1>
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="slds-col slds-p-horizontal_medium">
+              <div
+                style="
+                  max-width: 100%;
+                  overflow: hidden;
+                  color: red;
+                  width: 400px;
+                  height: 400px;
+                "
+              >
+                <div
+                  style="
+                    overflow: hidden;
+                    resize: none;
+                    max-width: 100%;
+                    width: 400px;
+                    height: 400px;
+                  "
+                >
+                  <div
+                    id="embed-ded-map-canvas"
+                    style="height: 100%; width: 100%; max-width: 100%"
+                  >
+                    <iframe
+                      style="height: 100%; width: 100%; border: 0"
+                      frameborder="0"
+                      src="https://www.google.com/maps/embed/v1/place?q=Bangalore,+Karnataka,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                    >
+                    </iframe>
+                  </div>
+                  <a
+                    class="google-maps-html"
+                    href="https://www.bootstrapskins.com/themes"
+                    id="grab-maps-authorization"
+                    >premium bootstrap themes</a
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              class="googlemaps-html"
+              href="https://www.embed-map.com"
+              id="get-data-forembedmap"
+              >https://www.embed-map.com</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <!-- <lightning-card>
+        
+        <div class="slds-grid slds-wrap">
+   
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element">
+                  <lightning-input label="First Name" value={firstName} onchange={contactChangeVal}></lightning-input>
+                </div>
+            </div>
+   
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+              <div class="slds-form-element">
+                  <lightning-input label="Last Name" value={lastName} onchange={contactChangeVal}></lightning-input>
+               </div>
+            </div>
+   
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+              <div class="slds-form-element">
+                  <lightning-input label="Phone" value={phoneNo} onchange={contactChangeVal}></lightning-input>
+               </div>
+            </div>
+   
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+              <div class="slds-form-element">
+                  <lightning-input label="Email" value={emailId} onchange={contactChangeVal} ></lightning-input>
+               </div>
+            </div>
+   
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+              <div class="slds-form-element">
+                  <lightning-input label="Department" value={departmentVal} onchange={contactChangeVal} ></lightning-input>
+               </div>
+            </div>
+   
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+              
+              <div class="slds-form-element">               
+                 <lightning-input label="Description" value={descriptionVal} onchange={contactChangeVal}></lightning-input>
+               </div>
+            </div>
+            
+        </div>
+       
+      
+   
+       <div slot="footer">
+          <lightning-button label="Create Contact Record" variant="brand" onclick={insertContactAction}></lightning-button>        
+        </div>
+      </lightning-card> -->
+      </div>
+      <div class="intro">
+        <div class="slds-col slds-p-horizontal_medium">
+          <h5 class="pr-lg-5 pr-xs-3 text-wrap color-customBlueLight">
+            &nbsp;One of my favorite things about this job is the variety, in
+            clients and projects. <br />
+            So no matter the work or technology, get in touch and tell me what you
+            have in mind. <br />- I can't wait to hear all about it!
+          </h5>
+          <div class="w-50 mt-5 float-md-right text-right mr-lg-5 container">
+            <h1 class="pr-lg-5 pr-xs-3 text-boldest mb-0 color-custom">
+              Lets <br />Work <br />
+              Together!<br />”
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- Button Instagram -->
+      <br />
+      <div class="socialBtns">
+        <a
+          href="https://github.com/shivamkapasia0"
+          target="_blank"
+          class="contactMe_btn fa fa-github fa-1x"
+          >&nbsp;github</a
+        >
+        <a
+          href="https://instagram.com/shivaay0o7"
+          target="_blank"
+          class="contactMe_btn fa fa-instagram fa-1x"
+          >&nbsp;instagram</a
+        >
+        <a
+          href="https://www.facebook.com/shivaayO07"
+          target="_blank"
+          class="contactMe_btn fa fa-facebook fa-1x"
+          >&nbsp;facebook</a
+        >
+        <a
+          href="https://www.linkedin.com/in/anushkadixit630"
+          target="_blank"
+          class="contactMe_btn fa fa fa-linkedin fa-1x"
+          >&nbsp;linekdin</a
+        >
+      </div>
+    </div>
+  </template>
+  

@@ -1,0 +1,130 @@
+<!--
+  @description       : 
+  @author            : Anushka Dixit
+  @group             : 
+  @last modified on  : 06-03-2023
+  @last modified by  : Anushka Dixit
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   20-02-2023   Anushka Dixit   Initial Version
+-->
+<template>
+  <!-- BODY -->
+<div class={themeClass}>
+<div class="slds-col slds-p-horizontal_medium">
+  <div class="slds-grid slds-wrap">
+    <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_6-of-12 frstgrid">  
+      <div class="slds-col slds-p-horizontal_medium grl">
+        <img src={codeImageUrl}>
+      </div>
+     </div>
+    <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_6-of-12 frstgrid"> 
+  
+    <div class="bio">
+       <span class="color-customLight h5 font-weight-bold hello ">Hello !</span><br>
+       <span class="color-customBlue h1 font-weight-bold ">I'm {myName}</span><br>
+       <span class="color-customLight h3">I'm a <span class="font-weight-bold">{myProfessionField}</span> {myProfession}</span><br><br>
+       <span class="color-customLight h5">{myBio}</span>
+       <br>
+         <span><a class="contactMe_btn" href="https://drive.google.com/file/d/1D8GuJ16YEuslP0IaN89xQdje2SSFSn-m/view?usp=drivesdk" download>My Resume</a></span>
+       
+    </div>
+    </div>
+    </div>
+</div>
+
+</div>
+<!-- MAP AND FORM -->
+<!-- MAP -->
+<div class="loc">
+<!-- first grid -->
+
+<div class="slds-grid slds-wrap secgrid">
+  <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_6-of-12 frstgrid frstgrid1"> 
+
+          <div class="container mt-3 contactContent">
+      <!-- <h1 class="text-center" style="text-align:right;">Contact Me</h1> -->
+            <h1 class="text-center" style="margin-top:20px;text-align:left;color:brown">My Location</h1>
+            <div class="row mt-4">
+              <div class="col-lg-6">         
+                <div
+                  style="
+                    max-width: 100%;
+                    overflow: hidden;
+                    color: red;
+                    width: 400px;
+                    height: 400px;
+                  "
+                  >
+                 <div
+                   style="
+                     overflow: hidden;
+                     resize: none;
+                     max-width: 100%;
+                     width: 400px;
+                     height: 400px;
+                   "
+                   >
+                     <div
+                         id="embed-ded-map-canvas"
+                         style="height: 90%; width: 100%; max-width: 100%"
+                     >
+                     <iframe
+                       style="height: 90%; width: 100%; border: 0"
+                       frameborder="0"
+                       src="https://www.google.com/maps/embed/v1/place?q=Bangalore,+Karnataka,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                     >
+                     </iframe>
+                     </div>
+                  
+                  </div>
+                </div>
+              </div>
+              
+   
+            </div>
+         </div>
+      </div>
+      <div class="slds-col slds-large-size_6-of-12 slds-medium-size_6-of-12 slds-size_6-of-12">
+        <div class="form">
+          <h1 class="text-center topic" style="margin-top:20px;text-align:left;color:brown">Contact me</h1>
+            <!-- <lightning-card title="Create record using lightning-record-form">
+                <lightning-record-form
+                object-api-name={objectName}
+                fields={fieldList}
+                onsuccess={successHandler}
+                ></lightning-record-form>
+            </lightning-card> -->
+
+            <div class="slds-form-element" style="padding:20px;">
+              <label class="slds-form-element__label info" for="form-element-01" style="color:#4c4c5e "><b>First Name</b></label>
+                <div class="slds-form-element__control">
+                   <input type="text" id="form-element-01" placeholder="Enter Your First Name" class="slds-input" />
+                </div>
+              <label class="slds-form-element__label info" for="form-element-01"  style="color:#4c4c5e; "><b>Last Name</b></label>
+                <div class="slds-form-element__control">
+                   <input type="text" id="form-element-02" placeholder="Enter Your Last Name" class="slds-input" />
+                </div>
+              <label class="slds-form-element__label info" for="form-element-01"  style="color:#4c4c5e;"><b>Email</b></label>
+                <div class="slds-form-element__control">
+                   <input type="text" id="form-element-03" placeholder="Email" class="slds-input" />
+                </div>
+              <label class="slds-form-element__label info" for="form-element-01"  style="color:#4c4c5e; "><b>Description</b></label>
+                <div class="slds-form-element__control">
+                   <input type="text" id="form-element-04" placeholder="Description" class="slds-input" />
+                </div>
+            </div>
+          
+          <div class="slds-col slds-p-horizontal_medium">
+            <span><button class="slds-button slds-button_success button contactMe_btn send" >Send</button> </span> &nbsp;&nbsp;&nbsp;&nbsp;
+            <span><button class="slds-button slds-button_outline-brand contactMe_btn send" >Cancel</button> </span>
+         </div>
+         </div>
+      </div>
+</div>
+      
+    
+   
+</div>
+
+</template>
